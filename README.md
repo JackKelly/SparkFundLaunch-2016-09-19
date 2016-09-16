@@ -1,5 +1,5 @@
 If you just want to view this presentation, just point your browser to
-[jackkelly.github.io/EDF-2016-09-16](http://jackkelly.github.io/EDF-2016-09-16);
+[jackkelly.github.io/SparkFundLaunch-2016-09-19](http://jackkelly.github.io/SparkFundLaunch-2016-09-19);
 you do not have to clone this repository just to view the presentation.
 
 ---
