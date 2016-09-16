@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Energy Disaggregation Algorithm Competition</title>
+
+    <meta name="author" content="Jack Kelly">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="bower_components/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="bower_components/reveal.js/css/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/jack.css">
+    
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'bower_components/reveal.js/css/print/pdf.css' : 'bower_components/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section data-background-video="images/shutterstock_v1102696_chimneys.m4v"
+                 data-background-video-loop
+                 data-background-video-muted>
+          <!--"images/chimneys.jpg"> -->
+          <div style="background-color: rgba(0, 0, 0, 0.5); padding:
+                 10px; width: 100%; margin-top: 200px;">
+          <h3>Energy Disaggregation Competition</h3>
+          <p>
+            <small>
+              <a href="http://jack-kelly.com">Jack Kelly</a><br/>
+              jack.kelly@imperial.ac.uk<br/>
+              <br/>
+
+            </small>
+          </p>
+          </div>
+
+          <p class="tiny" style="margin-top: 200px; background-color:rgba(0, 0, 0, 0.5);">
+            Background video
+            by <a href="https://www.shutterstock.com/video/clip-1102696-stock-footage-tube-with-smoke-at-winter-sunset.html">Guryanov
+            Andrey / shutterstock</a>
+          </p>                    
+        </section>
+
+        <section>
+          <h3>What is Energy Disaggregation?</h3>
+        </section>
+
+        <section>
+          <h3>Aggregate Energy Bill</h3>
+          <img src="images/top_5_energy_aggregate.png">
+        </section>
+        
+        <section>
+          <h3>Itemised Energy Bill</h3>
+          <img src="images/top_5_energy.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_agg.png" >
+        </section>
+
+        <section>
+          <img src="images/area_plot_fridge.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_htpc.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_others.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_dish_washer.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_washer_dryer.png">
+        </section>
+
+        <section>
+          <img src="images/area_plot_kettle.png">
+        </section>
+
+        <section>
+          <h3>NILM = Non-Intrusive Load Monitoring</h3>
+        </section>
+
+        <!-- TODO:
+             * growth in NILM papers
+             * number of companies doing NILM
+          -->
+
+        <section>
+          <h3>Disaggregation research</h3>
+        </section>
+
+        <section>
+          <h2>George Hart</h2>
+          <img height=500 src="images/hart1.jpg">
+          <p class="tiny">George
+          Hart, <a href="http://www.georgehart.com/research/Hart1985.pdf">Prototype
+          Nonintrusive Appliance Load Monitor</a>, <em>MIT Energy
+          Lab / EPRI Technical Report</em>, 1985</p>          
+          <p class="tiny">George
+          Hart, <a href="http://dx.doi.org/10.1109/5.192069">Nonintrusive
+          Appliance Load Monitoring</a>, <em>Proceedings of the
+              IEEE</em>, 1992</p>
+        </section>
+        
+        <section data-background="images/NILMWorkshop.jpg">
+          <div class="fragment" style="background-color: rgba(0, 0, 0, 0.5); padding: 10px;">
+            <h3>The Energy Disaggregation community</h3>
+            <img style="opacity: 0.8;" src="images/growth.png">
+            <p class="tiny">Graph from Oliver Parson, <a href="http://blog.oliverparson.co.uk/2015/03/overview-of-nilm-field.html">Overview of the
+            NILM field</a>, <em>blog post</em>, 2015</p>
+          </div>      
+        </section>
+
+        <section>
+          <p>Over 30 companies now offering NILM products or services</p>
+        </section>
+        
+        <!-- ******************************************************
+                                   PLANS
+        ******************************************************** -->
+        
+        <section>
+          <h1>Plans for a NILM algorithm competition</h1>
+        </section>
+
+        <section>
+          <h3>Why we need a NILM competition</h3>
+          <ul>
+            <li class="fragment">Currently impossible to compare NILM
+              algorithms
+              <ul>
+                <li class="fragment">Different datasets, metrics, 
+                  pre-processing, appliances etc.</li>
+                <li class="fragment">Hence no way to measure progress or
+                  select best algos</li>
+              </ul>
+            </li>
+            <li class="fragment">Competitions work for other machine learning fields</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <p><strong>ImageNet</strong> Large Scale Visual Recognition
+          Challenge (ILSVRC)</p>
+          <img src="images/imagenet.png" height=550>
+          <p class="tiny">From: Krizhevsky, Sutskever &amp;
+          Hinton. <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks">ImageNet Classification with Deep
+            Convolutional Neural Networks</a>.  NIPS (2012)
+            </p>
+        </section>
+
+        <section>
+          <p><strong>Krizhevsky et al.'s DNN Results on ImageNet 2012</strong></p>
+          <img src="images/krizhevskyResults.png" height=550>
+          <p class="tiny">Krizhevsky, Sutskever &amp;
+          Hinton. <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks">ImageNet Classification with Deep
+            Convolutional Neural Networks</a>.  NIPS (2012)
+            </p>
+        </section>
+        
+        <section>
+          <img src="images/imagenetResults.png" width="90%">
+          <p class="tiny">Image from <a href="http://devblogs.nvidia.com/parallelforall/mocha-jl-deep-learning-julia/">devblogs.nvidia.com</a></p>
+        </section>        
+        
+        <section>
+          <h3>Work plan</h3>
+          <img src="images/EDFworkplan.png"/>          
+        </section>
+
+        <section>
+          <h3>Data</h3>
+          <ul>
+            <li>From Pecan Street, Austin, Texas, USA</li>
+            <li>Already collected >1,000 houses of disag data</li>
+            <li>Will collect another >100 houses</li>
+          </ul>
+        </section>
+        
+        <!-- TODO: 
+             * Discuss data from Pecan street
+            -->
+        
+        <section>
+          <h1>Questions?</h1>
+          <small>jack.kelly@imperial.ac.uk</small>
+        </section>
+
+      </div>
+
+    </div>
+
+    <!-- REVEAL -->
+    <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
+    <script src="bower_components/reveal.js/js/reveal.js"></script>
+    
+    <!-- REVEAL INIT -->
+    <script src="js/reveal-init.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-29040208-8', 'auto');
+      ga('send', 'pageview');
+
+      // From https://github.com/hakimel/reveal.js/issues/211#issuecomment-60726240
+      Reveal.addEventListener("slidechanged",function(event){
+
+        ga('send', 'pageview', {
+          'page': event.indexh,
+          'title': document.title + ' : Slide ' + event.indexh
+        });
+
+      });
+    </script>
+    
+  </body>
+</html>
